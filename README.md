@@ -15,6 +15,7 @@ Distributed web application written in Go for managing a consortium of libraries
 
 ## Architecture
 
+```text
                        Browser
                            │
                      Central Server
@@ -25,6 +26,7 @@ Distributed web application written in Go for managing a consortium of libraries
       Torino             Milano              Roma
         │                  │                  │
       SQLite            SQLite             SQLite
+```
 
 ## How to run
 
