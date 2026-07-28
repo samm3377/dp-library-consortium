@@ -1,0 +1,48 @@
+{{template "base" .}}
+
+{{define "content"}}
+<div class="search-page">
+    <div class="search-card">
+        <h1>👤 Profile of {{.Username}}</h1>
+        <h2>Books reserved</h2>
+
+        {{if .Books}}
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>City</th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {{range .Books}}
+                    <tr>
+                        <td class="book-title">{{.Title}}</td>
+                        <td>{{.Author}}</td>
+                        <td>📍 {{.City}}</td>
+                        <td>
+                            <form method="POST" action="/release">
+                                <input type="hidden" name="bookId" value="{{.ID}}">
+                                <input type="hidden" name="libraryId" value="{{.LibraryID}}">
+                                <button class="reserve-btn" type="submit">
+                                    Release
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                    {{end}}
+                </tbody>
+            </table>
+        </div>
+        {{else}}
+        <div class="empty-card">
+            📖 No book reserved.
+        </div>
+        {{end}}
+    </div>
+</div>
+{{end}}

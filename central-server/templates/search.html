@@ -1,0 +1,117 @@
+{{template "base" .}}
+
+{{define "content"}}
+
+<div class="search-page">
+
+    <div class="search-card">
+
+        <h1>📚 Search books</h1>
+
+        <form class="search-form" method="GET" action="/">
+            <input 
+                type="text" 
+                id="query" 
+                name="query" 
+                placeholder="Search by title or author"
+                value="{{.Query}}"
+            >
+
+            <button type="submit">
+                🔍 Search
+            </button>
+        </form>
+
+        <br>
+        <form class="search-form" method="GET" action="/">
+            <input type="hidden" name="findAll" value="true">
+            <button type="submit">
+                🔍 Show all
+            </button>
+        </form>
+
+    </div>
+
+
+    {{if .Books}}
+
+    <div class="results-card">
+
+        <h2>Search results</h2>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>City</th>
+                        <th>Available</th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    {{ $query := .Query }}
+
+                    {{range .Books}}
+
+                    <tr>
+                        <td class="book-title">
+                            {{.Title}}
+                        </td>
+
+                        <td>
+                            {{.Author}}
+                        </td>
+
+                        <td>
+                            {{.City}}
+                        </td>
+
+                        <td>
+                            <span class="quantity">
+                                {{.AvailableCopy}}
+                            </span>
+                        </td>
+
+                        <td>
+                            <form method="POST" action="/reservation">
+                                <input type="hidden" name="bookId" value="{{.ID}}">
+                                <input type="hidden" name="libraryId" value="{{.LibraryID}}">
+                                <input type="hidden" name="query" value="{{$query}}">
+
+                                <button class="reserve-btn" type="submit">
+                                    Reserve
+                                </button>
+
+                            </form>
+                        </td>
+
+                    </tr>
+
+                    {{end}}
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+    {{else}}
+
+        {{if .Searched}}
+
+        <div class="empty-card">
+            📖 No book found.
+        </div>
+
+        {{end}}
+
+    {{end}}
+
+</div>
+
+{{end}}

@@ -1,0 +1,37 @@
+[
+    {
+        "title": "Il nome della rosa",
+        "author": "Umberto Eco",
+        "availableCopy": 3
+    },
+    {
+        "title": "1984",
+        "author": "George Orwell",
+        "availableCopy": 5
+    },
+    {
+        "title": "Il Piccolo Principe",
+        "author": "Antoine de Saint-Exupéry",
+        "availableCopy": 12
+    },
+    {
+        "title": "Il signore degli anelli",
+        "author": "J.R.R. Tolkien",
+        "availableCopy": 2
+    },
+    {
+        "title": "Frankenstein",
+        "author": "Mary Shelley",
+        "availableCopy": 7
+    },
+    {
+        "title": "Il grande Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "availableCopy": 5
+    },
+    {
+        "title": "Cent'anni di solitudine",
+        "author": "Gabriel García Márquez",
+        "availableCopy": 0
+    }
+]

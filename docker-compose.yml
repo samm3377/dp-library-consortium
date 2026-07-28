@@ -1,0 +1,54 @@
+services:
+
+  central-server:
+    build: ./central-server
+    environment:
+      CENTRAL_PORT: ${CENTRAL_PORT}
+      DB_PATH: ${DB_PATH}
+      SESSION_SECRET: ${SESSION_SECRET}
+    volumes:
+      - central_data:/app/data
+    ports:
+      - "${CENTRAL_PORT}:80"
+
+  milano-library:
+    build: ./library-service
+    volumes:
+      - milano_data:/app/data
+      - ./library-service/seed/milano_books.json:/app/seed/books.json
+    environment:
+      LIBRARY_NAME: Milan
+      DB_PATH: /app/data/library.db
+      BOOKS_FILE: /app/seed/books.json
+    expose:
+      - "${MILANO_PORT}"
+
+  roma-library:
+    build: ./library-service
+    volumes:
+      - roma_data:/app/data
+      - ./library-service/seed/roma_books.json:/app/seed/books.json
+    environment:
+      LIBRARY_NAME: Rome
+      DB_PATH: /app/data/library.db
+      BOOKS_FILE: /app/seed/books.json
+    expose:
+      - "${ROMA_PORT}"
+
+  torino-library:
+    build: ./library-service
+    volumes:
+      - torino_data:/app/data
+      - ./library-service/seed/torino_books.json:/app/seed/books.json
+    environment:
+      LIBRARY_NAME: Turin
+      DB_PATH: /app/data/library.db
+      BOOKS_FILE: /app/seed/books.json
+    expose:
+      - "${TORINO_PORT}"
+
+volumes:
+  central_data:
+  milano_data:
+  roma_data:
+  torino_data:

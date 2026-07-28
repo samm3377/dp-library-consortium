@@ -1,0 +1,14 @@
+[
+    {
+        "City": "Milan",
+        "BaseURL": "http://milano-library:8080"
+    },
+    {
+        "City": "Rome",
+        "BaseURL": "http://roma-library:8080"
+    },
+    {
+        "City": "Turin",
+        "BaseURL": "http://torino-library:8080"
+    }
+]

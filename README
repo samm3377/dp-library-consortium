@@ -1,0 +1,40 @@
+# Library Consortium
+
+## Description
+
+Distributed web application written in Go for managing a consortium of libraries.
+Project for the Distributed Programming for web, IOT and mobile system.
+
+## Technologies
+
+- Go
+- GORM
+- SQLite
+- Docker
+- HTML Templates
+
+## Architecture
+
+                       Browser
+                           │
+                     Central Server
+                           │
+        ┌──────────────────┼──────────────────┐
+        │                  │                  │
+  Library Service    Library Service    Library Service
+      Torino             Milano              Roma
+        │                  │                  │
+      SQLite            SQLite             SQLite
+
+## How to run
+
+docker compose up --build
+
+## Services
+
+- Central Server
+- Library Service
+
+## Authors
+
+Samuele Mancini

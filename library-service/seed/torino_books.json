@@ -1,0 +1,37 @@
+[
+    {
+        "title": "Frankenstein",
+        "author": "Mary Shelley",
+        "availableCopy": 6
+    },
+    {
+        "title": "Il grande Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "availableCopy": 2
+    },
+    {
+        "title": "La metamorfosi",
+        "author": "Franz Kafka",
+        "availableCopy": 8
+    },
+    {
+        "title": "Guida galattica per gli autostoppisti",
+        "author": "Douglas Adams",
+        "availableCopy": 11
+    },
+    {
+        "title": "Fahrenheit 451",
+        "author": "Ray Bradbury",
+        "availableCopy": 0
+    },
+    {
+        "title": "1984",
+        "author": "George Orwell",
+        "availableCopy": 9
+    },
+    {
+        "title": "Il Piccolo Principe",
+        "author": "Antoine de Saint-Exupéry",
+        "availableCopy": 1
+    }
+]

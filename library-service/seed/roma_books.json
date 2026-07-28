@@ -1,0 +1,37 @@
+[
+    {
+        "title": "Dune",
+        "author": "Frank Herbert",
+        "availableCopy": 4
+    },
+    {
+        "title": "Orgoglio e pregiudizio",
+        "author": "Jane Austen",
+        "availableCopy": 7
+    },
+    {
+        "title": "Cronache marziane",
+        "author": "Ray Bradbury",
+        "availableCopy": 1
+    },
+    {
+        "title": "Il ritratto di Dorian Gray",
+        "author": "Oscar Wilde",
+        "availableCopy": 9
+    },
+    {
+        "title": "Neuromante",
+        "author": "William Gibson",
+        "availableCopy": 0
+    },
+    {
+        "title": "Guida galattica per gli autostoppisti",
+        "author": "Douglas Adams",
+        "availableCopy": 2
+    },
+    {
+        "title": "Fahrenheit 451",
+        "author": "Ray Bradbury",
+        "availableCopy": 4
+    }
+]
