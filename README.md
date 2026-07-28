@@ -31,6 +31,7 @@ Distributed web application written in Go for managing a consortium of libraries
 ## How to run
 
 docker compose up --build
+
 To access the web application: in your browser navigate to: http://locahost
 
 ## Services
